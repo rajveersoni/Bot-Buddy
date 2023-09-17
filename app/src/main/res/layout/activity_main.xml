@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Your chats appear here"
+        android:textSize="20dp"
+        android:textColor="#8FFFFFFF"
+        android:visibility="visible"
+        android:id="@+id/appear"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idRVChats"
+        android:layout_above="@id/idRLMsg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/idRLMsg"
+        android:padding="2dp"
+        android:layout_marginBottom="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ask me anything..."
+            android:textColorHint="#8FFFFFFF"
+            android:id="@+id/etMessage"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/send"
+            android:background="@drawable/rounded_corner"
+            android:layout_centerInParent="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/img"
+            android:id="@+id/send"
+            app:fabCustomSize="45dp"
+            android:backgroundTint="#29B6F6"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="1dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
